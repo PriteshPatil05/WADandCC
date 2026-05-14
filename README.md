@@ -1,2 +1,1 @@
 # WADandCC
-Practical
