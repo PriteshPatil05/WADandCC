@@ -1,0 +1,116 @@
+/* Body Styling */
+
+body{
+
+    /* Removes horizontal scrolling */
+    overflow-x: hidden;
+
+    /* Background color of webpage */
+    background-color: #f4f4f4;
+}
+
+
+
+/* Sidebar Styling */
+
+.sidebar{
+
+    /* Full screen height */
+    height: 100vh;
+
+    /* Dark background */
+    background-color: #212529;
+
+    /* Text color white */
+    color: white;
+
+    /* Top spacing */
+    padding-top: 20px;
+}
+
+
+
+/* Sidebar Links */
+
+.sidebar a{
+
+    /* Text color */
+    color: white;
+
+    /* Removes underline */
+    text-decoration: none;
+
+    /* Makes links block elements */
+    display: block;
+
+    /* Padding inside links */
+    padding: 12px 20px;
+
+    /* Smooth hover animation */
+    transition: 0.3s;
+}
+
+
+
+/* Hover Effect */
+
+.sidebar a:hover{
+
+    /* Changes color on mouse hover */
+    background-color: #495057;
+}
+
+
+
+/* Card Styling */
+
+.card-box{
+
+    /* Rounded corners */
+    border-radius: 10px;
+
+    /* Text color */
+    color: white;
+
+    /* Inner spacing */
+    padding: 20px;
+
+    /* Shadow effect */
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+
+
+/* Card 1 Color */
+
+.bg1{
+    background-color: #0d6efd;
+}
+
+
+
+/* Card 2 Color */
+
+.bg2{
+    background-color: #198754;
+}
+
+
+
+/* Card 3 Color */
+
+.bg3{
+    background-color: #dc3545;
+}
+
+
+
+/* Card 4 Color */
+
+.bg4{
+
+    background-color: #ffc107;
+
+    /* Black text for visibility */
+    color: black;
+}
