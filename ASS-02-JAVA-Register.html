@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .container{
+            width: 300px;
+            background: white;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        input{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button{
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: blue;
+            color: white;
+            border: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>User Registration</h2>
+
+    <form id="registrationForm">
+
+        <input type="text" id="name" placeholder="Enter Name" required>
+
+        <input type="email" id="email" placeholder="Enter Email" required>
+
+        <input type="password" id="password" placeholder="Enter Password" required>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</div>
+
+<script>
+
+document.getElementById("registrationForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    // Get input values
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    // Create object
+    let user = {
+        name: name,
+        email: email,
+        password: password
+    };
+
+    // Get old data from localStorage
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Push new user
+    users.push(user);
+
+    // Save back to localStorage
+    localStorage.setItem("users", JSON.stringify(users));
+
+    // AJAX POST Method
+    let xhr = new XMLHttpRequest();
+
+    xhr.open("POST", "display.html", true);
+
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.send(JSON.stringify(user));
+
+    alert("Registration Successful");
+
+    // Redirect to display page
+    window.location.href = "display.html";
+
+});
+
+</script>
+
+</body>
+</html>
